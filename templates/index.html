@@ -1,0 +1,651 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>MyNGO</title>
+    <!--meta tags -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="keywords"
+      content="Oblige Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, 
+         Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design"
+    />
+    <script>
+      addEventListener(
+        "load",
+        function () {
+          setTimeout(hideURLbar, 0);
+        },
+        false
+      );
+
+      function hideURLbar() {
+        window.scrollTo(0, 1);
+      }
+    </script>
+    <!--//meta tags ends here-->
+    <!--booststrap-->
+    <link
+      href="static/css/bootstrap.min.css"
+      rel="stylesheet"
+      type="text/css"
+      media="all"
+    />
+    <!--//booststrap end-->
+    <!-- font-awesome icons -->
+    <link href="static/css/font-awesome.min.css" rel="stylesheet" />
+    <!-- //font-awesome icons -->
+    <!--stylesheets-->
+    <link href="static/css/style.css" rel="stylesheet" type="text/css" media="all" />
+    <!--//stylesheets-->
+    <link
+      href="//fonts.googleapis.com/css?family=Fira+Sans:400,500,600,700"
+      rel="stylesheet"
+    />
+    <link
+      href="//fonts.googleapis.com/css?family=Oxygen:400,700"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="main-top" id="home">
+      <!-- header -->
+      <div class="headder-top">
+        <div class="container-fluid">
+          <!-- nav -->
+          <nav>
+            <div id="logo">
+              <h1>
+                <a class="" href="/ "
+                  >MyNGO<span>One Place to Donate & Volunteer for a good</span></a
+                >
+              </h1>
+            </div>
+            <label for="drop" class="toggle">Menu</label>
+            <input type="checkbox" id="drop" />
+            <ul class="menu mt-2">
+              <li class="active"><a href="/ ">Home</a></li>
+              <li class="mx-lg-3 mx-md-2 my-md-0 my-1">
+                <a href="#about">About</a>
+              </li>
+              <li><a href="#service">Services</a></li>
+              <li class="mx-lg-3 mx-md-2 my-md-0 my-1">
+                <!-- First Tier Drop Down -->
+                <label for="drop-2" class="toggle toogle-2"
+                  >More
+                  <span class="fa fa-angle-down" aria-hidden="true"></span>
+                </label>
+                <a href="#"
+                  >More
+                  <span class="fa fa-angle-down" aria-hidden="true"></span
+                ></a>
+                <input type="checkbox" id="drop-2" />
+                <ul>
+                  <li><a href="#gallery" class="drop-text">Gallery</a></li>
+                  <li><a href="#team" class="drop-text">Team</a></li>
+                  <li><a href="#blog" class="drop-text">Blog</a></li>
+                  <li><a href="#contact" class="drop-text">Contact Us</a></li>
+                </ul>
+              </li>
+              <li class="mx-md-2 my-md-0 my-1"><Form>
+                <button class="navbutton btn generalButton" formaction="{{ url_for('donate') }}">Donate Now</button>
+              </Form>
+              </li>
+              <li class="my-md-0 my-1"><Form>
+                <button class="navbutton btn generalButton" formaction="{{ url_for('volunteer') }}">Volunteer Now</button>
+              </Form>
+              </li>
+            </ul>
+          </nav>
+          <!-- //nav -->
+        </div>
+      </div>
+      <!-- //header -->
+      <!-- banner -->
+      <div class="main-banner">
+        <div class="container">
+          <div class="style-banner">
+            <h4 class="mb-1">Better Care and Better World</h4>
+            <h5>You have a good life, some other don't</h5>
+          </div>
+    
+          <div class="hero-button">
+            <Form>
+              <button class="btn generalButton" formaction="{{ url_for('donate') }}">Donate Now</button>
+            </Form>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- //banner -->
+
+    <!-- about -->
+    <section class="about py-lg-4 py-md-3 py-sm-3 py-3" id="about">
+      <div class="container py-lg-5 py-md-4 py-sm-4 py-3">
+        <div class="row">
+          <div class="col-lg-7 col-md-6">
+            <div class="wthree-about-txt mb-lg-5 mb-md-4 mb-3">
+              <h5>About Us</h5>
+            </div>
+            <div class="about-para-txt">
+              <p>
+                Save the Children is India’s leading independent child rights’
+                NGO, which works in 18 states of the country. Beginning its
+                journey in 2008 in India, and registered as ‘Bal Raksha Bharat’,
+                we have changed the lives of more than 11 million (1.1 crore)
+                children. We firmly believe that every child deserves the best
+                chance for a bright future, which is why, we are fiercely
+                committed to ensure that children not only survive, but thrive.
+                With a bold ambition and a powerful vigilance, we do whatever it
+                takes to save the children. In India and across the world, Save
+                the Children works on-ground – every day and especially, in
+                times of crisis. Our pioneering programs address children’s
+                unique needs; giving them a healthy start, an opportunity to
+                learn as well as protection from harm.
+              </p>
+         
+            </div>
+            <div class="view-price mt-lg-5 mt-md-4 mt-3">
+              <a href="#contact" class="scroll">Read More</a>
+            </div>
+          </div>
+          <div class="col-lg-5 col-md-6 about-imgs-txt"></div>
+        </div>
+      </div>
+    </section>
+    <!-- about  -->
+    <!--state -->
+    <section class="stats py-lg-4 py-md-3 py-sm-3 py-3">
+      <div class="container py-lg-5 py-md-4 py-sm-4 py-3">
+        <div class="stats-info row">
+          <div class="col-lg-3 col-md-3 col-sm-6 col-6 stats-grid">
+            <div class="register-left-num">
+              <div class="count-icon">
+                <span class="fa fa-paw" aria-hidden="true"></span>
+              </div>
+              <div class="counter-number">1200</div>
+              <div class="stat-info pt-lg-3 pt-md-3 pt-sm-3 pt-3">
+                <h4>Donation</h4>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-3 col-sm-6 col-6 stats-grid">
+            <div class="register-left-num">
+              <div class="count-icon">
+                <span class="fa fa-smile-o" aria-hidden="true"></span>
+              </div>
+              <div class="counter-number">2000</div>
+              <div class="stat-info pt-lg-3 pt-md-3 pt-sm-3 pt-3">
+                <h4>Volunteers</h4>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-3 col-sm-6 col-6 stats-grid">
+            <div class="register-left-num">
+              <div class="count-icon">
+                <span class="fa fa-leaf" aria-hidden="true"></span>
+              </div>
+              <div class="counter-number">4000</div>
+              <div class="stat-info pt-lg-3 pt-md-3 pt-sm-3 pt-3">
+                <h4>Rescued</h4>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-3 col-sm-6 col-6 stats-grid">
+            <div class="register-left-num">
+              <div class="count-icon">
+                <span class="fa fa-globe" aria-hidden="true"></span>
+              </div>
+              <div class="counter-number">30+</div>
+              <div class="stat-info pt-lg-3 pt-md-3 pt-sm-3 pt-3">
+                <h4>Countries</h4>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--//state -->
+    <!-- service -->
+    <section class="service py-lg-4 py-md-3 py-sm-3 py-3" id="service">
+      <div class="container py-lg-5 py-md-4 py-sm-4 py-3">
+        <h3 class="title text-center mb-md-4 mb-sm-3 mb-3 mb-2">Our Service</h3>
+        <div class="row">
+          <div class="col-lg-5 service-two-grids">
+            <div class="color-img-five">
+              <div class="ser-sevice-grid text-center">
+                <h4 class="pb-3"><a href="{{ url_for('donate') }}">Make A Donation</a></h4>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-5 service-two-grids">
+            <div class="color-img-five">
+              <div class="ser-sevice-grid text-center">
+                <h4 class="pb-3"><a href="{{ url_for('volunteer') }}">Become Volunteer</h4>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--//service -->
+    <!--team -->
+    <section class="team py-lg-4 py-md-3 py-sm-3 py-3" id="team">
+      <div class="container py-lg-5 py-md-4 py-sm-4 py-3">
+        <h3 class="title text-center mb-md-4 mb-sm-3 mb-3 mb-2 clr">
+          Our Team
+        </h3>
+        <div
+          class="
+            title-wls-text
+            text-center
+            mb-lg-5 mb-md-4 mb-sm-4 mb-3
+            sub-colors
+          "
+        ></div>
+        <div class="row">
+          <div class="col-lg-3 col-md-6 col-sm-6 team-grid-colum text-center">
+            <img src="static/developerImages/Mayank.jpg" width ="300px" height="300px" alt="" class="img-fluid" />
+            <div class="text-grid-gried">
+              <h4>Mayank Raj</h4>
+              <ul class="d-flex justify-content-center pt-3 social-icons">
+                <li>
+                  <a href="#">
+                    <span class="fa fa-google-plus"></span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6 col-sm-6 team-grid-colum text-center">
+            <img src="static/developerImages/Harsh.jpg" width ="300px" height="300px" alt="" class="img-fluid"/>
+            <div class="text-grid-gried">
+              <h4>Harshvardhan</h4>
+              <ul class="d-flex justify-content-center pt-3 social-icons">
+                <li>
+                  <a href="#">
+                    <span class="fa fa-google-plus"></span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6 col-sm-6 team-grid-colum text-center">
+            <img src="static/developerImages/Hridyesh.jpeg" alt="" class="img-fluid" />
+            <div class="text-grid-gried">
+              <h4>Hridyesh</h4>
+              <ul class="d-flex justify-content-center pt-3 social-icons">
+                <li>
+                  <a href="#">
+                    <span class="fa fa-google-plus"></span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-lg-3 col-md-6 col-sm-6 team-grid-colum text-center">
+              <img src="static/developerImages/Laasya.jpeg" alt="" class="img-fluid" />
+              <div class="text-grid-gried">
+                <h4>Laasya</h4>
+                <ul class="d-flex justify-content-center pt-3 social-icons">
+                  <li>
+                    <a href="#">
+                      <span class="fa fa-google-plus"></span>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-6 team-grid-colum text-center">
+              <img src="static/developerImages/Vaishnavi.jpg" alt="" class="img-fluid" />
+              <div class="text-grid-gried">
+                <h4>Vaishnavi</h4>
+                <ul class="d-flex justify-content-center pt-3 social-icons">
+                  <li>
+                    <a href="#">
+                      <span class="fa fa-google-plus"></span>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--//team -->
+    <!-- gallery-main -->
+    <section class="gallery py-lg-4 py-md-3 py-sm-3 py-3" id="gallery">
+      <div class="container py-lg-5 py-md-4 py-sm-4 py-3">
+        <h3 class="title text-center mb-md-4 mb-sm-3 mb-3 mb-2">Our Gallery</h3>
+
+        <div class="row gallery-info">
+          <div class="col-lg-3 col-md-3 col-sm-6 gallery-img-grid p-0">
+            <div class="gallery-grids">
+              <a href="#gal1"
+                ><img src="static/images/g1.jpg" alt="news image" class="img-fluid"
+              /></a>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-3 col-sm-6 gallery-img-grid p-0">
+            <div class="gallery-grids">
+              <a href="#gal2"
+                ><img src="static/images/g2.jpg" alt="news image" class="img-fluid"
+              /></a>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-3 col-sm-6 gallery-img-grid p-0">
+            <div class="gallery-grids">
+              <a href="#gal3"
+                ><img src="static/images/g3.jpg" alt="news image" class="img-fluid"
+              /></a>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-3 col-sm-6 gallery-img-grid p-0">
+            <div class="gallery-grids p-0">
+              <a href="#gal4"
+                ><img src="static/images/g4.jpg" alt="news image" class="img-fluid"
+              /></a>
+            </div>
+          </div>
+          <div
+            class="
+              col-lg-6 col-md-6 col-sm-6
+              gallery-img-grid gallery-mid-two
+              p-0
+            "
+          >
+            <div class="gallery-grids">
+              <a href="#gal5"
+                ><img src="static/images/g5.jpg" alt="news image" class="img-fluid"
+              /></a>
+            </div>
+          </div>
+          <div
+            class="
+              col-lg-6 col-md-6 col-sm-6
+              gallery-img-grid gallery-mid-two
+              p-0
+            "
+          >
+            <div class="gallery-grids">
+              <a href="#gal6"
+                ><img src="static/images/g6.jpg" alt="news image" class="img-fluid"
+              /></a>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-4 col-sm-12 gallery-img-three p-0">
+            <div class="gallery-grids">
+              <a href="#gal7"
+                ><img src="static/images/g7.jpg" alt="news image" class="img-fluid"
+              /></a>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-4 col-sm-12 gallery-img-three p-0">
+            <div class="gallery-grids">
+              <a href="#gal8"
+                ><img src="static/images/g8.jpg" alt="news image" class="img-fluid"
+              /></a>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-4 col-sm-12 gallery-img-three p-0">
+            <div class="gallery-grids">
+              <a href="#gal9"
+                ><img src="static/images/g9.jpg" alt="news image" class="img-fluid"
+              /></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--// gallery-main -->
+    <!-- popup-->
+    <div id="gal1" class="popup-effect">
+      <div class="popup">
+        <img src="static/images/g1.jpg" alt="Popup Image" class="img-fluid" />
+        <a class="close" href="#gallery">&times;</a>
+      </div>
+    </div>
+    <!-- //popup -->
+    <!-- popup-->
+    <div id="gal2" class="popup-effect">
+      <div class="popup">
+        <img src="static/images/g2.jpg" alt="Popup Image" class="img-fluid" />
+        <a class="close" href="#gallery">&times;</a>
+      </div>
+    </div>
+    <!-- //popup -->
+    <!-- popup-->
+    <div id="gal3" class="popup-effect">
+      <div class="popup">
+        <img src="static/images/g3.jpg" alt="Popup Image" class="img-fluid" />
+        <a class="close" href="#gallery">&times;</a>
+      </div>
+    </div>
+    <!-- //popup -->
+    <!-- popup-->
+    <div id="gal4" class="popup-effect">
+      <div class="popup">
+        <img src="static/images/g4.jpg" alt="Popup Image" class="img-fluid" />
+        <a class="close" href="#gallery">&times;</a>
+      </div>
+    </div>
+    <!-- //popup -->
+    <!-- popup-->
+    <div id="gal5" class="popup-effect">
+      <div class="popup">
+        <img src="static/images/g5.jpg" alt="Popup Image" class="img-fluid" />
+        <a class="close" href="#gallery">&times;</a>
+      </div>
+    </div>
+    <!-- //popup -->
+    <!-- popup-->
+    <div id="gal6" class="popup-effect">
+      <div class="popup">
+        <img src="static/images/g6.jpg" alt="Popup Image" class="img-fluid" />
+        <a class="close" href="#gallery">&times;</a>
+      </div>
+    </div>
+    <!-- //popup -->
+    <!-- popup-->
+    <div id="gal7" class="popup-effect">
+      <div class="popup">
+        <img src="static/images/g7.jpg" alt="Popup Image" class="img-fluid" />
+        <a class="close" href="#gallery">&times;</a>
+      </div>
+    </div>
+    <!-- //popup -->
+    <!-- popup-->
+    <div id="gal8" class="popup-effect">
+      <div class="popup">
+        <img src="static/images/g8.jpg" alt="Popup Image" class="img-fluid" />
+        <a class="close" href="#gallery">&times;</a>
+      </div>
+    </div>
+    <!-- //popup -->
+    <!-- popup-->
+    <div id="gal9" class="popup-effect">
+      <div class="popup">
+        <img src="static/images/g9.jpg" alt="Popup Image" class="img-fluid" />
+        <a class="close" href="#gallery">&times;</a>
+      </div>
+    </div>
+    <!-- //popup -->
+    <!-- //gallery popups -->
+    <!-- //gallery -->
+    <!-- blog -->
+    <section class="blog py-lg-4 py-md-3 py-sm-3 py-3" id="blog">
+      <div class="container-fluid py-lg-5 py-md-4 py-sm-4 py-3">
+        <h3 class="title text-center mb-md-4 mb-sm-3 mb-3 mb-2">Latest Blog</h3>
+
+        <div class="row">
+          <div class="col-lg-3 col-md-6 col-sm-6 busness-tip-one"></div>
+          <div class="col-lg-3 col-md-6 col-sm-6 mid-text-info">
+            <div class="blog-info">
+              <a href="#contact" class="scroll">
+                <ul>
+                  <li>JUL</li>
+                  <li>15</li>
+                </ul>
+              </a>
+            </div>
+            <h4 class="mb-lg-4 mb-3">
+              <a href="#contact">Better Care and Better World</a>
+            </h4>
+          </div>
+          <div class="col-lg-3 col-md-6 col-sm-6 busness-tip-two"></div>
+          <div class="col-lg-3 col-md-6 col-sm-6 mid-text-info">
+            <div class="blog-info">
+              <a href="#contact" class="scroll">
+                <ul>
+                  <li>JUL</li>
+                  <li>15</li>
+                </ul>
+              </a>
+            </div>
+            <h4 class="mb-lg-4 mb-3">
+              <a href="#contact">We Need Your Help For Rescue Child</a>
+            </h4>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-3 col-md-6 col-sm-6 mid-text-info">
+            <h4 class="mb-lg-4 mb-3">
+              <a href="#contact">Better Care and Better World</a>
+            </h4>
+          </div>
+          <div class="col-lg-3 col-md-6 col-sm-6 busness-tip-two">
+            <div class="blog-info">
+              <a href="#contact" class="scroll">
+                <ul>
+                  <li>JUL</li>
+                  <li>15</li>
+                </ul>
+              </a>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6 col-sm-6 mid-text-info">
+            <h4 class="mb-lg-4 mb-3">
+              <a href="#contact">We Need Your Help For Rescue Child</a>
+            </h4>
+          </div>
+          <div class="col-lg-3 col-md-6 col-sm-6 busness-tip-one pl-sm-0">
+            <div class="blog-info">
+              <a href="#contact" class="scroll">
+                <ul>
+                  <li>JUL</li>
+                  <li>15</li>
+                </ul>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- //blog -->
+    <!-- Info-matter -->
+    <section class="info-matter py-lg-4 py-md-3 py-sm-3 py-3" id="info-matter">
+      <div class="container py-lg-5 py-md-4 py-sm-4 py-3">
+        <div class="row">
+          <div class="col-lg-6 text-sm-center">
+            <img src="static/images/info.png" alt="" class="img-fluid" />
+          </div>
+          <div class="col-lg-6 info-matter-join mt-lg-4 mt-3">
+            <h5 class="mb-lg-4 mb-3">Are You A Volunteer Ready?</h5>
+           
+            <div class="view-buttn mt-md-4 mt-sm-4 mt-3">
+              <a href="#contact" class="btn scroll">Join Us</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--// Info-matter-->
+    <!-- contact -->
+    <section class="contact py-lg-4 py-md-3 py-sm-3 py-3" id="contact">
+      <div class="container py-lg-5 py-md-4 py-sm-4 py-3">
+        <h3 class="title text-center mb-md-4 mb-sm-3 mb-3 mb-2">contact Us</h3>
+
+        <div class="row">
+          <div class="col-lg-6 col-md-6 contact-details">
+            <form action="#" method="post">
+              <div class="form-group contact-forms">
+                <input
+                  type="text"
+                  class="form-control"
+                  placeholder="Name"
+                  required=""
+                />
+              </div>
+              <div class="form-group contact-forms">
+                <input
+                  type="email"
+                  class="form-control"
+                  placeholder="Email"
+                  required=""
+                />
+              </div>
+              <div class="form-group contact-forms">
+                <input
+                  type="text"
+                  class="form-control"
+                  placeholder="Phone"
+                  required=""
+                />
+              </div>
+              <div class="form-group contact-forms">
+                <textarea
+                  class="form-control"
+                  placeholder="Message"
+                  rows="3"
+                  required=""
+                ></textarea>
+              </div>
+              <button type="submit" class="btn sent-butnn">Send</button>
+            </form>
+          </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--//contact -->
+   
+    <!-- footer -->
+    <footer class="py-3">
+      <div class="container">
+        <div class="icons mt-3 text-center">
+          <ul class="d-flex justify-content-center pb-3 social-icons">
+            <li>
+              <a href="#">
+                <span class="fa fa-facebook-f"></span>
+              </a>
+            </li>
+            <li class="mx-3">
+              <a href="#">
+                <span class="fa fa-twitter"></span>
+              </a>
+            </li>
+            <li class="mr-3">
+              <a href="#">
+                <span class="fa fa-google-plus"></span>
+              </a>
+            </li>
+            <li>
+              <a href="#"><span class="fa fa-vk"></span></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+     
+      <!-- move icon -->
+      <div class="txt-center">
+        <a href="#home" class="move-top txt-center mt-3"></a>
+      </div>
+      <!--//move icon -->
+    </footer>
+    <!--//footer -->
+  </body>
+</html>

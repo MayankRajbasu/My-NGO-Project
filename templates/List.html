@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="static/css/bootstrap.min.css"
+      rel="stylesheet"
+      type="text/css"
+      media="all"
+    />
+    <!--//booststrap end-->
+    <!-- font-awesome icons -->
+    <link href="static/css/font-awesome.min.css" rel="stylesheet" />
+    <!-- //font-awesome icons -->
+    <!--stylesheets-->
+    <link href="static/css/style.css" rel="stylesheet" type="text/css" media="all" />
+    <!--//stylesheets-->
+    <link
+      href="//fonts.googleapis.com/css?family=Fira+Sans:400,500,600,700"
+      rel="stylesheet"
+    />
+    <link
+      href="//fonts.googleapis.com/css?family=Oxygen:400,700"
+      rel="stylesheet"
+    />
+    <style>
+        td{
+            text-align: center;
+        }
+        table
+        {
+            width: 1200px;
+        }
+    </style>
+    <title>NGO_list</title>
+</head>
+<body>
+     <!-- header -->
+     <div class="headder-top">
+      <div class="container-fluid">
+        <!-- nav -->
+        <nav>
+          <div id="logo">
+            <h1>
+              <a class="" href="/ "
+                ><span style="font-size: 24px">MyNGO</span></a
+              >
+            </h1>
+          </div>
+          <label for="drop" class="toggle">Menu</label>
+          <input type="checkbox" id="drop" />
+          <ul class="menu mt-2">
+            <li class="active"><a href="/ ">Home</a></li>
+           <li class="mx-md-2 my-md-0 my-1"><Form>
+                <button class="navbutton btn generalButton" formaction="{{ url_for('donate') }}">Donate Now</button>
+              </Form>
+              </li>
+              <li class="my-md-0 my-1"><Form>
+                <button class="navbutton btn generalButton" formaction="{{ url_for('volunteer') }}">Volunteer Now</button>
+              </Form>
+              </li>
+          </ul>
+        </nav>
+        <!-- //nav -->
+      </div>
+    </div>
+     <!--header-->
+<section class="contact py-lg-4 py-md-3 py-sm-3 py-3" id="contact">
+ <div class="row" style="padding-top: 3rem">
+          <div class="col-lg-6 col-md-6 contact-details">
+            <form method="post" action="">
+              <div style="margin-bottom: 1rem" class="form-group contact-forms" >
+                <input
+                  name="city"
+                  type="text"
+                  class="form-control"
+                  placeholder="City"
+                  required=""
+                />
+              </div>
+            <button type="submit" class="btn sent-butnn" style="margin-top: 0px">Submit</button>
+            </form>
+          </div>
+ </div>
+<div class="row" style="margin-top: 2rem">
+<table border="2">
+     <tr>
+        <td style="width: 80px"> NGOId</td>
+        <td> Name</td>
+        <td> Workfeild</td>
+        <td> Contact</td>
+        <td> City</td>
+        <td> State</td>
+    </tr>
+    {% for row in ngo %}
+    <tr>
+        <td> {{ row[0] }}</td>
+        <td> {{ row[1] }}</td>
+        <td> {{ row[2] }}</td>
+        <td> {{ row[3] }}</td>
+        <td> {{ row[4] }}</td>
+        <td> {{ row[5] }}</td>
+    </tr>
+    {% endfor %}
+</table>
+</div>
+</section>
+</body>
+</html>

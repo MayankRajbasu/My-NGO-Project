@@ -1,1 +1,1 @@
-# My-NGO-Project
+# NGO
