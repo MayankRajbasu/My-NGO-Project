@@ -80,19 +80,15 @@
                   <span class="fa fa-angle-down" aria-hidden="true"></span
                 ></a>
                 <input type="checkbox" id="drop-2" />
-                <ul>
+                <ul style="position: inherit">
                   <li><a href="#gallery" class="drop-text">Gallery</a></li>
                   <li><a href="#team" class="drop-text">Team</a></li>
                   <li><a href="#blog" class="drop-text">Blog</a></li>
                   <li><a href="#contact" class="drop-text">Contact Us</a></li>
                 </ul>
               </li>
-              <li class="mx-md-2 my-md-0 my-1"><Form>
-                <button class="navbutton btn generalButton" formaction="{{ url_for('donate') }}">Donate Now</button>
-              </Form>
-              </li>
               <li class="my-md-0 my-1"><Form>
-                <button class="navbutton btn generalButton" formaction="{{ url_for('volunteer') }}">Volunteer Now</button>
+                <button class="navbutton btn generalButton" formaction="{{ url_for('regngo') }}">Register Ngo</button>
               </Form>
               </li>
             </ul>
@@ -113,7 +109,9 @@
             <Form>
               <button class="btn generalButton" formaction="{{ url_for('donate') }}">Donate Now</button>
             </Form>
-            
+            <Form style="padding-top: 0.5rem ;">
+              <button class="btn generalButton" formaction="{{ url_for('volunteer') }}">Volunteer Now</button>
+            </Form>
           </div>
         </div>
       </div>

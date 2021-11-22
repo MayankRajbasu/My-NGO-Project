@@ -6,13 +6,11 @@ import pyodbc
 conn = pyodbc.connect('Driver={SQL Server};'
                       'Server=MOINAK;'
                       'Database=NGO;'
-                      'Trusted_Connection=yes;')
-
+                      'Trusted_Connection=yes;'
+                      )
 cur = conn.cursor()
 
 app = Flask(__name__)
-
-
 
 @app.route('/')
 def hello_world():
@@ -70,6 +68,10 @@ def ngo():
     cur.execute("SELECT * fROM Ngo")
     data = cur.fetchall()
     return render_template("List.html",ngo=data)
+
+@app.route("/regNgo",methods=['GET','POST'])
+def regngo():
+    return render_template('N_form.html')
 
 if __name__ == '__main__':
     app.run(debug=True)
