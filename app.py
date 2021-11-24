@@ -1,6 +1,4 @@
-from flask import Flask, render_template,url_for,request,redirect
-from flask_mysqldb import MySQL
-
+from flask import Flask, render_template,url_for,request
 import pyodbc
 
 conn = pyodbc.connect('Driver={SQL Server};'
@@ -58,17 +56,17 @@ def volunteer():
         return render_template("List.html", ngo=data)
     return render_template('V_form.html')
 
-@app.route("/ngo",methods=['GET','POST'])
-def ngo():
+@app.route("/old_donor",methods=['GET','POST'])
+def old_donor():
     if request.method == 'POST':
         n_data=request.form
-        City = n_data['city']
-        cur.execute("SELECT * fROM Ngo where City=(?) ",(City))
-        data =cur.fetchall()
-        return render_template("List.html",ngo=data)
-    cur.execute("SELECT * fROM Ngo")
-    data = cur.fetchall()
-    return render_template("List.html",ngo=data)
+        Aadhar=n_data['aadhar']
+        Item = n_data['item']
+        Quantity = n_data['quantity']
+        Amount = n_data['amount']
+        cur.execute("INSERT INTO Donation(Aadhar,Item_donated,Item_quantity,Amount_donated) VALUES(?,?,?,?)",(Aadhar,Item,Quantity,Amount))
+        cur.commit()
+    return render_template("O_form.html")
 
 @app.route("/regNgo",methods=['GET','POST'])
 def regngo():

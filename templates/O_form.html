@@ -12,7 +12,7 @@
     />
     <!--//booststrap end-->
     <!-- font-awesome icons -->
-    <link href="static/css/font-awesome.min.css'" rel="stylesheet" />
+    <link href="static/css/font-awesome.min.css" rel="stylesheet" />
     <!-- //font-awesome icons -->
     <!--stylesheets-->
     <link href="static/css/style.css" rel="stylesheet" type="text/css" media="all" />
@@ -37,7 +37,7 @@
           <div id="logo">
             <h1>
               <a class="" href="/ "
-                ><span style="font-size: 24px">MyNGO</span></a
+                ><span style="font-size:24px ">MyNGO</span></a
               >
             </h1>
           </div>
@@ -60,31 +60,9 @@
     <section class="contact py-lg-4 py-md-3 py-sm-3 py-3" id="contact">
       <div class="container py-lg-5 py-md-4 py-sm-4 py-3">
         <h3 class="title text-center mb-md-4 mb-sm-3 mb-3 mb-2">Donate Now</h3>
-
         <div class="row">
           <div class="col-lg-6 col-md-6 contact-details" style="text-align: right">
             <form method="post" action="">
-{#           {% csrf_token %}#}
-              <div class="form-group contact-forms" >
-                <input
-                  name="name"
-                  type="text"
-                  class="form-control"
-                  placeholder="Name"
-                  required=""
-                />
-              </div>
-              <div class="form-group contact-forms" >
-                <input
-                  name="age"
-                  type="number"
-                  class="form-control"
-                  placeholder="Age"
-                  required=""
-                  min=18
-                  max=100
-                />
-              </div>
               <div class="form-group contact-forms" >
                 <input
                   name="aadhar"
@@ -97,34 +75,6 @@
               </div>
               <div class="form-group contact-forms" >
                 <input
-                  name="phone"
-                  type="text"
-                  maxlength="10"
-                  class="form-control"
-                  placeholder="Phone"
-                  required=""
-                />
-              </div>
-              <div class="form-group contact-forms " >
-                <input
-                  name="city"
-                  type="text"
-                  class="form-control"
-                  placeholder="City"
-                  required=""
-                />
-              </div>
-              <div class="form-group contact-forms"  >
-                <textarea
-                  name="address"
-                  class="form-control"
-                  placeholder="Address"
-                  rows="3"
-                  required=""
-                ></textarea>
-              </div>
-              <div class="form-group contact-forms" >
-                <input
                   name="item"
                   type="text"
                   class="form-control"
@@ -132,20 +82,6 @@
                   required=""
                 />
               </div>
-              <!--
-              <div class="form-group contact-forms" >
-                <select name="Workfield" class="form-control" name="workfield" >
-                  <option value="NULL" selected>---Select Workfield---</option>
-                  <option value="Education">Education</option>
-                  <option value="Children" >Children</option>
-                  <option value="Disabled People">Disabled People</option>
-                  <option value="Health">Health</option>
-                  <option value="Environment" >Environment</option>
-                  <option value="Elderly People" >Elderly People</option>
-                  <option value="Women">Women</option>
-                </select>
-              </div>
-              -->
               <div class="form-group contact-forms">
                 <input
                   name="quantity"
@@ -167,7 +103,6 @@
               </div>
               <button type="submit" class="btn sent-butnn">Submit</button>
             </form>
-              <a href="/old_donor " ><span style="color: #00b381;font-size: 16px" >Old donor</span></a>
           </div>
           </div>
         </div>
