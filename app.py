@@ -13,7 +13,7 @@ cur = conn.cursor()
 app = Flask(__name__)
 
 @app.route('/')
-def hello_world():
+def home():
     # put application's code here
     return render_template('index.html')
 
@@ -35,10 +35,9 @@ def donate():
         cur.commit()
         cur.execute("INSERT INTO Donation(Aadhar,Item_donated,Item_quantity,Amount_donated) VALUES(?,?,?,?)",(Aadhar,Item,Quantity,Amount))
         cur.commit()
-        # return 'sucess'
-        # print(Name,Age)
-        return redirect('/ngo')
-
+        cur.execute("SELECT * fROM Ngo where City=(?) ", (City))
+        data = cur.fetchall()
+        return render_template("List.html", ngo=data)
     return render_template('Form.html')
 
 @app.route("/volunteer", methods=['GET','POST'])
@@ -54,7 +53,9 @@ def volunteer():
         Address=VolunteerDetails['address']
         cur.execute(" INSERT INTO Volunteer(Name, Age,Gender,Aadhar, Phone, City, Address) VALUES(?,?,?,?,?,?,?)",(Name,Age,Gender,Aadhar,Phone,City,Address))
         cur.commit()
-        return redirect('/ngo')
+        cur.execute("SELECT * fROM Ngo where City=(?) ", (City))
+        data = cur.fetchall()
+        return render_template("List.html", ngo=data)
     return render_template('V_form.html')
 
 @app.route("/ngo",methods=['GET','POST'])
@@ -71,6 +72,15 @@ def ngo():
 
 @app.route("/regNgo",methods=['GET','POST'])
 def regngo():
+    if request.method =='POST':
+        r_data=request.form
+        Name=r_data['name']
+        Work=r_data['work']
+        Phone=r_data['phone']
+        City=r_data['city']
+        State=r_data['state']
+        cur.execute(" INSERT INTO NGO(Ngo_Name,Ngo_Workfield,Phone,City,State) VALUES (?,?,?,?,?)",(Name,Work,Phone,City,State))
+        cur.commit()
     return render_template('N_form.html')
 
 if __name__ == '__main__':

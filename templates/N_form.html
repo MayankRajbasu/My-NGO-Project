@@ -44,9 +44,9 @@
           <label for="drop" class="toggle">Menu</label>
           <input type="checkbox" id="drop" />
           <ul class="menu mt-2">
-            <li class="active"><a href="/ ">Home</a></li>
+{#            <li class="active"><a href="/ ">Home</a></li>#}
             <li><Form>
-              <button class="navbutton btn generalButton" formaction="{{ url_for('donate') }}">Donate Now</button>
+              <button class="navbutton btn generalButton" formaction="{{ url_for('home') }}">Home</button>
             </Form>
             </li>
           </ul>
@@ -59,8 +59,7 @@
     <!-- Donation Form -->
     <section class="contact py-lg-4 py-md-3 py-sm-3 py-3" id="contact">
       <div class="container py-lg-5 py-md-4 py-sm-4 py-3">
-        <h3 class="title text-center mb-md-4 mb-sm-3 mb-3 mb-2">Volunteer Now</h3>
-
+        <h3 class="title text-center mb-md-4 mb-sm-3 mb-3 mb-2">Register Ngo</h3>
         <div class="row">
           <div class="col-lg-6 col-md-6 contact-details" style="text-align: right">
             <form method="post" action="">
@@ -75,31 +74,10 @@
               </div>
               <div class="form-group contact-forms" >
                 <input
-                  name="age"
-                  type="number"
-                  class="form-control"
-                  placeholder="Age"
-                  required=""
-                  min=18
-                  max=100
-                />
-              </div>
-              <div class="form-group contact-forms" >
-                <input
-                  name="gender"
+                  name="work"
                   type="text"
                   class="form-control"
-                  placeholder="Gender"
-                  required=""
-                />
-              </div>
-              <div class="form-group contact-forms" >
-                <input
-                  name="aadhar"
-                  type="text"
-                  maxlength="12"
-                  class="form-control"
-                  placeholder="aadhar"
+                  placeholder="Workfield"
                   required=""
                 />
               </div>
@@ -109,7 +87,7 @@
                   type="text"
                   maxlength="10"
                   class="form-control"
-                  placeholder="Phone"
+                  placeholder="Contact"
                   required=""
                 />
               </div>
@@ -124,16 +102,15 @@
               </div>
               <div class="form-group contact-forms" >
                 <textarea
-                  name="address"
+                  name="state"
                   class="form-control"
-                  placeholder="Address"
+                  placeholder="State"
                   rows="3"
                   required=""
                 ></textarea>
               </div>
               <button type="submit" class="btn sent-butnn">Submit</button>
             </form>
-              <a href="/"> <span style="color: #00b381;font-size: 16px">Old Volunteer</span></a>
           </div>
           </div>
         </div>

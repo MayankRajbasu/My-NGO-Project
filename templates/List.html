@@ -26,12 +26,33 @@
       rel="stylesheet"
     />
     <style>
-        td{
-            text-align: center;
-        }
-        table
+        .content-table
         {
-            width: 1200px;
+            min-width: 1200px;
+            font-size: 1.1em;
+            border-radius: 5px 5px 0 0;
+            overflow: hidden;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+        }
+        .content-table thead tr
+        {
+            background-color: #4dcaa7;
+            color: #ffffff;
+            text-align: left;
+            font-weight: bold;
+        }
+        .content-table th,
+        .content-table td
+        {
+            padding: 12px 15px;
+        }
+        .content-table tbody :nth-of-type(even)
+        {
+            background-color: #f3f3f3;
+        }
+        .content-table tbody
+        {
+            border-bottom: 2px solid #009879;
         }
     </style>
     <title>NGO_list</title>
@@ -68,41 +89,29 @@
     </div>
      <!--header-->
 <section class="contact py-lg-4 py-md-3 py-sm-3 py-3" id="contact">
- <div class="row" style="padding-top: 3rem">
-          <div class="col-lg-6 col-md-6 contact-details">
-            <form method="post" action="">
-              <div style="margin-bottom: 1rem" class="form-group contact-forms" >
-                <input
-                  name="city"
-                  type="text"
-                  class="form-control"
-                  placeholder="City"
-                  required=""
-                />
-              </div>
-            <button type="submit" class="btn sent-butnn" style="margin-top: 0px">Submit</button>
-            </form>
-          </div>
- </div>
-<div class="row" style="margin-top: 2rem">
-<table border="2">
-     <tr>
-        <td style="width: 80px"> NGOId</td>
-        <td> Name</td>
-        <td> Workfeild</td>
-        <td> Contact</td>
-        <td> City</td>
-        <td> State</td>
-    </tr>
+<div class="row" style="margin-top: 2rem;padding-top: 3rem">
+<table class="content-table">
+    <thead>
+        <tr>
+            <th style="width: 80px"> NGOId</th>
+            <th> Name</th>
+            <th> Workfeild</th>
+            <th> Contact</th>
+            <th> City</th>
+            <th> State</th>
+        </tr>
+    </thead>
     {% for row in ngo %}
-    <tr>
-        <td> {{ row[0] }}</td>
-        <td> {{ row[1] }}</td>
-        <td> {{ row[2] }}</td>
-        <td> {{ row[3] }}</td>
-        <td> {{ row[4] }}</td>
-        <td> {{ row[5] }}</td>
-    </tr>
+    <tbody>
+         <tr>
+             <td> {{ row[0] }}</td>
+             <td> {{ row[1] }}</td>
+             <td> {{ row[2] }}</td>
+             <td> {{ row[3] }}</td>
+             <td> {{ row[4] }}</td>
+             <td> {{ row[5] }}</td>
+       </tr>
+    </tbody>
     {% endfor %}
 </table>
 </div>
