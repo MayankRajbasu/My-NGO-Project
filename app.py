@@ -10,6 +10,7 @@ cur = conn.cursor()
 
 app = Flask(__name__)
 
+
 @app.route('/')
 def home():
     # put application's code here
