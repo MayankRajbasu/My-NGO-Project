@@ -54,13 +54,13 @@
         {
             border-bottom: 2px solid #009879;
         }
-        .sec
-        {
-            font-size: 28px;
-            text-align: center;
-            padding: 2rem;
-            background: #fafafa;
-        }
+        {#.sec#}
+        {#{#}
+        {#    font-size: 28px;#}
+        {#    text-align: center;#}
+        {#    padding: 2rem;#}
+        {#    background: #fafafa;#}
+        {#}#}
     </style>
     <title>NGO_list</title>
 </head>
@@ -95,9 +95,24 @@
       </div>
     </div>
      <!--header-->
-<section class="contact py-lg-4 py-md-3 py-sm-3 py-3" id="contact">
-        <h3 class="title text-center mb-md-4 mb-sm-3 mb-3 mb-2">NGOs You can contact</h3>
-
+<section class=" sec contact py-lg-4 py-md-3 py-sm-3 py-3" id="contact">
+        <h3 class="title text-center mb-md-4 mb-sm-3 mb-3 mb-2">NGOs You may contact</h3>
+{#    <div class="row" style="padding-top: 3rem">#}
+{#          <div class="col-lg-6 col-md-6 contact-details">#}
+{#            <form method="post" action="">#}
+{#              <div style="margin-bottom: 1rem" class="form-group contact-forms" >#}
+{#                <input#}
+{#                  name="city"#}
+{#                  type="text"#}
+{#                  class="form-control"#}
+{#                  placeholder="City"#}
+{#                  required=""#}
+{#                />#}
+{#              </div>#}
+{#            <button type="submit" class="btn sent-butnn" style="margin-top: 0px">Submit</button>#}
+{#            </form>#}
+{#          </div>#}
+{#    </div>#}
 <div class="row" style="margin-top: 2rem;padding-top: 3rem">
 <table class="content-table">
     <thead>
@@ -125,15 +140,6 @@
 </table>
 </div>
 </section>
-{#{% if ngo == null%}#}
-{#<section class="sec">#}
-{#     <h3>Sorry!! We don't have any NGO contacts in your City </h3>#}
-{#    <div>#}
-{#        <ul>#}
-{#            <li>We will inform within one week about Ngo which will contact you for your help</li>#}
-{#        </ul>#}
-{#    </div>#}
-{#</section>#}
-{#{% endif %}#}
 </body>
 </html>
+

@@ -82,5 +82,19 @@ def regngo():
         cur.commit()
     return render_template('N_form.html')
 
+# @app.route("/list",methods=['GET','POST'])
+# def list():
+#     if request.method == 'POST':
+#         n_data=request.form
+#         City = n_data['city']
+#         cur.execute("SELECT * fROM Ngo where City=(?) ",(City))
+#         data =cur.fetchall()
+#         if data == 0:
+#             print(data)
+#         return render_template("List.html",ngo=data)
+#     cur.execute("SELECT * fROM Ngo")
+#     data = cur.fetchall()
+#     return render_template("List.html",ngo=data)
+
 if __name__ == '__main__':
     app.run(debug=True)
